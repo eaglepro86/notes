@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header > .logo {
+    font-size: 2rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+header > .heading {
+    font-size: 1.4rem;
+    padding: .5rem;
+    color: grey;
+}
+
+header > .heading > i{
+    padding: 0 2rem;
+}
+
+header > .social {
+    padding-right: 1rem;
+    font-size: 2rem;
+}
+
+header > .social > a {
+    color: #333;
+}
+
+header > .social > a:hover {
+    color: dodgerblue;
+}
+/* Header */
+
+/* Main */
+main {
+    height:100vh;
+    width: 100vw;
+    height: calc(100vh - 90px);
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.language-wrapper {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    gap: 1rem;
+}
+
+.col {
+    height: 82%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: dodgerblue;
+}
+
+.col > a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.col > a > i {
+    padding-left: .5rem;
+}
+
+
+/* Main */
+
+/* Responsive Grid - media queries */
+
+@media screen and (max-width: 768px) {
+    .language-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    main {
+        height: 100%;
+    }
+
+    .language-wrapper {
+        grid-template-columns: 2fr;
+    }
+
+    .col {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width:427px) {
+
+    .language-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
